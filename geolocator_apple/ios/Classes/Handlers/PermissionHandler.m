@@ -69,12 +69,12 @@
     }
   }
 #else
-//   if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationWhenInUseUsageDescription"] != nil) {
+  if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationWhenInUseUsageDescription"] != nil) {
     [locationManager requestWhenInUseAuthorization];
-//   }
-//   else if ([self containsLocationAlwaysDescription]) {
+  }
+  else if ([self containsLocationAlwaysDescription]) {
 //     [locationManager requestAlwaysAuthorization];
-//   }
+  }
 #endif
   else {
     if (self.errorHandler) {
